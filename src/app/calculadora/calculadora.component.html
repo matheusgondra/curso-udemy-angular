@@ -12,8 +12,15 @@
             <button type="submit">Somar</button>
         </form>
 
-        <div class="resul-display">
-            <p>Resultado: <span id="result">{{ resultado }}</span></p>
-        </div>
+        @if (resultado) {
+            <div class="resul-display">
+                <p>Resultado: <span id="result">{{ resultado }}</span></p>
+            </div>
+        } @else {
+            <div class="resul-display">
+                <p>Seu resultado aparecerá aqui.</p>
+            </div>
+        }
+
     </div>
 </div>
