@@ -21,16 +21,17 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th>1</th>
-                <th>Arroz</th>
-                <th><input type="checkbox" /></th>
-            </tr>
-            <tr>
-                <th>2</th>
-                <th>Maçã</th>
-                <th><input type="checkbox" /></th>
-            </tr>
+            @for (elemento of lista; track elemento.id) {
+                <tr>
+                    <th>{{ elemento.id }}</th>
+                    <th>{{ elemento.nome }}</th>
+                    <th><input type="checkbox" /></th>
+                </tr>
+            } @empty {
+                <tr colspan="3">
+                    Nenum item na lista.
+                </tr>
+            }
         </tbody>
     </table>
 </div>
