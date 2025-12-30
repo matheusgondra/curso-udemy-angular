@@ -52,8 +52,12 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
+button[type="submit"]:hover {
     background-color: #0056B3;
+}
+
+button[type="button"] {
+    background-color: #D53D1F;
 }
 
 table {
@@ -85,4 +89,8 @@ tbody tr:nth-child(even){
 input[type="checkbox"] {
     transform: scale(1.2);
     cursor: pointer;
+}
+
+.item-riscado {
+    text-decoration: line-through;
 }
